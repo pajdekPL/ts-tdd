@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "name": "kataRockPaperScissors",
+      "path": "."
+    },
+    {
+      "name": "kataFizzBuzz",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "jest.disabledWorkspaceFolders": ["ts-tdd"]
+  }
+}

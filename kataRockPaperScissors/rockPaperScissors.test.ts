@@ -31,62 +31,60 @@ describe("Rock Paper Scissors", () => {
       });
     });
     describe("Player wins {Player} vs {Opponent}", () => {
-      it("Scissors vs Paper", () => {
-        const input: [Move, Move] = [Move.Scissors, Move.Paper];
-        const expected = Outcome.PlayerWins;
-        const sut = createRockPaperScissors();
+      test.each([
+        {
+          playerMove: Move.Scissors,
+          opponentMove: Move.Paper,
+          expected: Outcome.PlayerWins,
+        },
+        {
+          playerMove: Move.Rock,
+          opponentMove: Move.Scissors,
+          expected: Outcome.PlayerWins,
+        },
+        {
+          playerMove: Move.Paper,
+          opponentMove: Move.Rock,
+          expected: Outcome.PlayerWins,
+        },
+      ])(
+        "Player wins $playerMove vs $opponentMove",
+        ({ playerMove, opponentMove, expected }) => {
+          const sut = createRockPaperScissors();
 
-        const actual = sut.play(...input);
+          const actual = sut.play(playerMove, opponentMove);
 
-        expect(actual).toBe(expected);
-      });
-      it("Rock vs Scissors", () => {
-        const input: [Move, Move] = [Move.Rock, Move.Scissors];
-        const expected = Outcome.PlayerWins;
-        const sut = createRockPaperScissors();
-
-        const actual = sut.play(...input);
-
-        expect(actual).toBe(expected);
-      });
-      it("Paper vs Rock", () => {
-        const input: [Move, Move] = [Move.Paper, Move.Rock];
-        const expected = Outcome.PlayerWins;
-        const sut = createRockPaperScissors();
-
-        const actual = sut.play(...input);
-
-        expect(actual).toBe(expected);
-      });
+          expect(actual).toBe(expected);
+        }
+      );
     });
     describe("Player loses {Player} vs {Opponent}", () => {
-      it("Paper vs Scissors", () => {
-        const input: [Move, Move] = [Move.Paper, Move.Scissors];
-        const expected = Outcome.PlayerLoses;
-        const sut = createRockPaperScissors();
+      test.each([
+        {
+          playerMove: Move.Paper,
+          opponentMove: Move.Scissors,
+          expected: Outcome.PlayerLoses,
+        },
+        {
+          playerMove: Move.Scissors,
+          opponentMove: Move.Rock,
+          expected: Outcome.PlayerLoses,
+        },
+        {
+          playerMove: Move.Rock,
+          opponentMove: Move.Paper,
+          expected: Outcome.PlayerLoses,
+        },
+      ])(
+        "Player loses $playerMove vs $opponentMove",
+        ({ playerMove, opponentMove, expected }) => {
+          const sut = createRockPaperScissors();
 
-        const actual = sut.play(...input);
+          const actual = sut.play(playerMove, opponentMove);
 
-        expect(actual).toBe(expected);
-      });
-      it("Rock vs Paper", () => {
-        const input: [Move, Move] = [Move.Rock, Move.Paper];
-        const expected = Outcome.PlayerLoses;
-        const sut = createRockPaperScissors();
-
-        const actual = sut.play(...input);
-
-        expect(actual).toBe(expected);
-      });
-      it("Scissors vs Rock", () => {
-        const input: [Move, Move] = [Move.Scissors, Move.Rock];
-        const expected = Outcome.PlayerLoses;
-        const sut = createRockPaperScissors();
-
-        const actual = sut.play(...input);
-
-        expect(actual).toBe(expected);
-      });
+          expect(actual).toBe(expected);
+        }
+      );
     });
   });
 });
