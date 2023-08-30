@@ -4,16 +4,16 @@
       "path": "."
     },
     {
+      "name": "kataAgeCalculator",
+      "path": "kataAgeCalculator"
+    },
+    {
       "name": "kataRockPaperScissors",
       "path": "kataRockPaperScissors"
     },
     {
       "name": "kataFizzBuzz",
       "path": "kataFizzBuzz"
-    },
-    {
-      "name": "kataAgeCalculator",
-      "path": "kataAgeCalculator"
     }
   ],
   "settings": {
