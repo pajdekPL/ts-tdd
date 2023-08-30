@@ -5,15 +5,15 @@
     },
     {
       "name": "kataRockPaperScissors",
-      "path": "."
+      "path": "kataRockPaperScissors"
     },
     {
       "name": "kataFizzBuzz",
-      "path": "."
+      "path": "kataFizzBuzz"
     },
     {
       "name": "kataAgeCalculator",
-      "path": "."
+      "path": "kataAgeCalculator"
     }
   ],
   "settings": {
