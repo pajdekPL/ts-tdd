@@ -4,6 +4,10 @@
       "path": "."
     },
     {
+      "name": "kataStringCalculator",
+      "path": "kataStringCalculator"
+    },
+    {
       "name": "kataAgeCalculator",
       "path": "kataAgeCalculator"
     },
