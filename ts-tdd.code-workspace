@@ -12,12 +12,16 @@
       "path": "kataAgeCalculator"
     },
     {
+      "name": "kataFizzBuzz",
+      "path": "kataFizzBuzz"
+    },
+    {
       "name": "kataRockPaperScissors",
       "path": "kataRockPaperScissors"
     },
     {
-      "name": "kataFizzBuzz",
-      "path": "kataFizzBuzz"
+      "name": "kataCharacterCopy",
+      "path": "kataCharacterCopy"
     }
   ],
   "settings": {
